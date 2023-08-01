@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodland-Claza Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+</head>
+<body>
+    <!-- section1 -->
+    <section>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h1 class="head">Woodland-Claza</h1></a>
+          <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav">
+              {% if user.is_authenticated %}
+              
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Rooms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+<!-- section1end     -->
+
+
+<!-- signupstarts -->
+<div class="signupdiv">
+    <div class="title"><h2><span>__Register</span> Here__</h2></div>
+    <div class="row sign">
+        <div class="col-md-6 sign1">
+            <div class="signimg">
+                <img src="{% static 'images/about-2.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-md-6 sign1">
+            <div class="divsign">
+                <form action="" method="post">
+                  {% csrf_token %}
+                    <div class="userdetails">
+                        {% comment %} <div class="inputbox">
+                            <span class="details">First Name</span>
+                            <input type="text" placeholder="First Name" name="fname">
+                        </div> {% endcomment %}
+                        <div class="inputbox">
+                            <span class="details">User Name</span>
+                            <input type="text" placeholder="User Name" name="username">
+                        </div>
+                        <div class="inputbox">
+                            <span class="details">E-mail</span>
+                            <input type="email" placeholder="E-mail" name="email">
+                        </div>
+                        <div class="inputbox">
+                            <span class="details">Password</span>
+                            <input type="password" placeholder="Password" name="password">
+                        </div>
+                        <div class="inputbox">
+                            <span class="details">Confirm Password</span>
+                            <input type="text" placeholder="Confirm Password" name="confirmpassword">
+                        </div>
+                        
+                        <button class="btn" type="submit" value="submit">Submit</button>
+
+                        {% for message in messages  %}
+                        <h4>{{message}}</h4>
+                        {% endfor %}
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- signupends -->
+
+
+
+
+
+    <!-- footerstarts -->
+    
+    <div class="footerbody ">
+      <footer class="pb-5 pt-5">
+        <ul class="socialicon">
+          <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
+  
+        </ul>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <p>©2023 Connect | All Rights Reserved </p>
+      </footer>
+  
+    </div>
+
+  <!-- footerends -->
+
+
+              
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

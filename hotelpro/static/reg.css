@@ -1,0 +1,98 @@
+
+
+
+
+/* signupstarts */
+.sign{
+    width: 100%;
+    display: flex;
+}
+.sign1{
+    height: 500px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.signimg{
+    width: 50%;
+    height: 91%;
+}
+.signimg img{
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+.divsign{
+    width: 50%;
+    height: 100%;
+}
+.divsign form{
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.details{
+    font-weight: 400;
+}
+
+.inputbox input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.btn{
+    background-color: #FF8400;
+    width: 360px;
+    height: 45px;
+    margin-top: 10px;
+}
+.title h2{
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    margin-left: 420px;
+}
+.title span{
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #FF8400;
+}
+/* signupends */
+
+/* loginstarts */
+.title2 h2{
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    margin-left: 520px;
+}
+.title2 span{
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #FF8400;
+}
+.divsign2{
+    margin-top: 100px;
+    margin-right: 20px;
+}
+.signimg2{
+    width: 50%;
+    height: 70%;
+}
+.signimg2 img{
+    height: 100%;
+    width: 100%;
+    padding-top: 80px;
+    padding-left: 10px;
+}
+/* loginends */
